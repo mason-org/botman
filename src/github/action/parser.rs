@@ -33,7 +33,7 @@ impl FromStr for AuthorizedUser {
 
     fn from_str(s: &str) -> Result<Self, Self::Err> {
         match s {
-            user @ "williamboman" => Ok(AuthorizedUser(user.to_owned())),
+            user @ ("williamboman" | "Conarius" | "mehalter" | "chrisgrieser") => Ok(AuthorizedUser(user.to_owned())),
             user => bail!("{} is not an allowed user.", user),
         }
     }
