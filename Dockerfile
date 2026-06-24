@@ -5,7 +5,7 @@ COPY . .
 RUN rustup toolchain install stable
 RUN cargo build -r
 
-FROM debian:bullseye
+FROM debian:bullseye-20260623
 
 # Install & setup Neovim
 RUN apt update && apt install -y git make curl tar unzip
